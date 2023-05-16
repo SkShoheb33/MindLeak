@@ -1,0 +1,43 @@
+app-splashscreen {
+    animation: anim1 2s linear;
+}
+
+app-login {
+    animation: anim2 3s linear;
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        opacity: 0.2;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 075;
+    }
+    100% {
+        opacity: 1;
+    }
+}
