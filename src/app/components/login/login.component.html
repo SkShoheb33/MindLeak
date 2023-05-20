@@ -14,13 +14,18 @@
             </div>
         </div>
         <div class="row col-5 offset-6 my-3 px-2">
-            <div class="btn btn-primary">Log in</div>
+            <a routerLink="home" class="btn btn-primary">
+                <div>Log in </div>
+            </a>
         </div>
         <div class="row col-5 offset-6 my-3 px-2">
             <p class="text-center h5">or</p>
         </div>
         <div class="row col-5 offset-6 my-3 px-2">
-            <div class="btn btn-warning">Create a new account</div>
+            <a routerLink="register" class="btn btn-warning">
+                <div>Create a new account </div>
+            </a>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>

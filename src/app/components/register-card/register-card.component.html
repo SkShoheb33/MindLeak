@@ -1,3 +1,7 @@
+<div class="alert alert-danger position-fixed w-100" [ngClass]="{'d-none':alert}">
+    <strong>Please fill the required field</strong>
+</div>
+<div class="alert alert-success position-fixed w-100" *ngIf="success"><strong>Successfully registers</strong></div>
 <div class="body">
     <div class="container">
         <div class="card border-2 w-25 offset-8 my-5 align-item-end ">
@@ -5,23 +9,27 @@
                 <div class="row">
                     <div class="card-title">
                         <div class="h6">
-                            Enter gmail id
+                            {{currentNode.question}}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="card-text">
                         <div class="form-group">
-                            <input type="text" name="" id="" class="form-control">
+                            <input [type]="currentNode.type" [value]='currentNode.answer' [(ngModel)]="currentNode.answer" #answer placeholder="Enter Here" id="" class="form-control ">
                         </div>
                     </div>
                 </div>
                 <div class="row my-3 justify-content-between">
                     <div class="col-3">
-                        <div class="btn btn-outline-primary">&larr;</div>
+                        <button class="btn btn-primary" (click)="prev(answer.value)" [disabled]="pDisabled">&larr;</button>
                     </div>
-                    <div class="col-3 ">
-                        <div class="btn btn-outline-primary ">&rarr;</div>
+                    <div class="col-3" [ngClass]=" { 'd-none':nDisabled} ">
+                        <button type="submit" class="btn btn-primary " (click)="next(answer.value)">&rarr;</button>
+                    </div>
+                    <div class="col-4" [ngClass]=" { 'd-none':!nDisabled} ">
+                        <button type="submit" class="btn btn-primary " (click)="submit()">Done</button>
+
                     </div>
                 </div>
 
