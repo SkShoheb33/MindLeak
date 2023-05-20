@@ -26,10 +26,10 @@ app-login {
 
 @keyframes anim2 {
     0% {
-        opacity: 0.2;
+        opacity: 0.5;
     }
     25% {
-        opacity: 0.25;
+        opacity: 0.5;
     }
     50% {
         opacity: 0.5;
